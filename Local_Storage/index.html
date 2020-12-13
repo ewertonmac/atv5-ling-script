@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalhando com LocalStorage</title>
+    <style>
+      li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="frmCadastro">
+      <ul>
+        <li>
+          <label for="txtCodigo">Código:</label>
+          <input type="text" id="txtCodigo" />
+        </li>
+        <li>
+          <label for="txtNome">Nome:</label>
+          <input type="text" id="txtNome" />
+        </li>
+        <li>
+          <label for="txtTelefone">Telefone:</label>
+          <input type="tel" id="txtTelefone" />
+        </li>
+        <li>
+          <label for="txtEmail">Email:</label>
+          <input type="text" id="txtEmail" />
+        </li>
+        <li>
+          <button type="submit" id="btnSalvar">Salvar</button>
+        </li>
+      </ul>
+    </form>
+
+    <button id="btnListar">Listar</button>
+    <table id="tblListar">
+      <thead>
+        <th></th>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script type="text/javascript" src="funcoes.js"></script>
+  </body>
+</html>
