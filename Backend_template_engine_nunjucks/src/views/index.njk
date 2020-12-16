@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block conteudo %}
+  <div id="wrapper">
+    <img src="{{dados.avatar_url}}" alt="Fabio abrantes">
+    <h1>{{dados.name}}</h1>
+    <h2>{{dados.role}}</h2>
+    <p>{{dados.description}}
+      
+      <a href="https://estudante.ifpb.edu.br/cursos/12/" target="_blank" > </a>
+    </p>
+  </div>
+
+  <div id="links-footer" class="links">
+    {% for link in dados.links %}
+    <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+    {% endfor%}
+  </div>
+{% endblock %}
