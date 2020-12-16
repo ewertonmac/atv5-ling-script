@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #141414;
+}
+
+body > p {
+    margin: .5rem 0;
+}
+
+body > p strong:nth-child(1) {
+    color: springgreen;
+}
+
+body > p strong:nth-child(2) {
+    color: gray;
+}
+
+.form {
+    width: 15rem;
+    border-radius: .25rem;
+    background: #1b1b1b;
+    box-shadow: 0px 0px 1px gray;
+}
+
+.form-type {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0rem .75rem;
+    box-shadow: 0px 0px 1px gray;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.form-type label {
+    cursor: pointer;
+    color: springgreen;
+    padding: .75rem .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-type label::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: springgreen;
+    height: .25rem;
+    width: 100%;
+    border-top-left-radius: .15rem;
+    border-top-right-radius: .15rem;
+}
+
+.form-type label:nth-child(2)::before {
+    background: none;
+}
+
+.form-type label:nth-child(2) {
+    border-color: transparent;
+    color: gray;
+}
+
+#toggle-form {
+    display: none;
+}
+
+.text-fields input {
+    background: rgb(46, 46, 46);
+    padding: .5rem;
+    border-radius: .25rem;
+    border: none;
+    color: gray;
+
+}
+
+.cartao
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields
+{
+    background-color: rgb(46, 46, 46);;
+}
+
+.text-fields {
+    margin-top: .5rem;
+}
+
+.textareaa input {
+    background: rgb(46, 46, 46);
+    padding: .5rem;
+    border-radius: .25rem;
+    border: none;
+    color: gray;
+    margin-top: .5rem;
+
+}
+
+
+
+.fields {
+    position: relative;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    margin-left: 5%;
+}
+
+.fields div {
+    margin-top: .5rem;
+}
+
+.fields div:nth-child(1) {
+    margin-top: 1.55rem;
+}
+
+.remember {
+    margin-top: .75rem;
+    display: flex;
+    font-size: .85rem;
+}
+
+.remember input {
+    margin-right: .25rem;
+}
+
+.login-action {
+    margin: 2rem auto;
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: black;
+    font-weight: 500;
+    background: springgreen;
+    width: max-content;
+}
+
+.forms {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    left: 0%;
+    transition: all .4s;
+}
+
+#toggle-form:checked ~ .forms .toggle {
+    left: -100%;
+}
+
+#toggle-form:checked ~ .form-type label:nth-child(1) {
+    border-color: transparent;
+    color: gray;
+}
+
+#toggle-form:checked ~ .form-type label:nth-child(1)::before {
+    background: none;
+}
+
+#toggle-form:checked ~ .form-type label:nth-child(2) {
+    color: springgreen;
+}
+
+#toggle-form:checked ~ .form-type label:nth-child(2)::before {
+    background: springgreen;
+}
