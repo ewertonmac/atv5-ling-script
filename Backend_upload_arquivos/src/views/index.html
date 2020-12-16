@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <p><strong>Cadastrar</strong><strong>Produtos</strong></p>
+        
+    <form  class="cartao" method="POST" action="/index" enctype="multipart/form-data">
+
+
+        <div class="fields">
+        
+        <div class="item">
+            <div>Título</div>
+            <div>
+            <input type="text"name="name" >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Descrição</div>
+            <div>
+            <textarea name="description"></textarea>
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Fotos</div>
+            <div>
+        
+            <div id="photos-upload">
+                <input 
+                id="photos-input"
+                type="file"
+                name="photos"
+                multiple
+                accept="image/*"
+                    >
+                
+            </div>
+            
+            <div id="photos-preview">
+                
+            </div>
+        
+        </div>
+    
+    
+    
+        <button class="button"type="submit">SALVAR</button>
+    </form>
+    
+</body>
+</html>
