@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/index.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#">
+        <div class="logo">
+          <h1>Launchstore</h1>
+          <h2> COMPRA E VENDA</h2>
+        </div>
+      </a>
+  
+      <form action="#" method="get" class="search">
+        <input type="text" 
+              name="filter" 
+              placeholder="Buscar por produtos"
+        >
+      </form>
+  
+      <nav class="primary">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="material-icons">add</i>
+              Novo anúncio
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="material-icons">account_circle</i>
+              Minha conta
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+
+  <section class="user-register container form">
+    <form class="card" method="POST" action="/users/register">
+
+      <div class="header">
+          <h3>Registre-se</h3>
+      </div>
+
+      <div class="fields">
+        <div class="item">
+          <div>Nome Completo</div>
+          <div class="input">
+            <input
+              type="text"
+              name="name"
+              placeholder="Digite seu nome completo"
+            >
+          </div>
+        </div>
+      
+        <div class="item">
+            <div>Email</div>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                placeholder="Digite seu email"
+                onblur="Validate.isEmail(this)"
+
+              >
+            </div>
+        </div>
+        
+        <div class="item">
+            <div>CNPJ</div>
+            <div class="input">
+              <input
+                type="text"
+                name="cpf_cnpj"
+                placeholder="Digite seu documento"
+                onkeyup="Mask.cpfCnpj(this)"
+                onblur="Validate.isCPF_CNPJ(this)"
+              >
+            </div>
+        </div>
+        
+        <div class="item">
+          <div>CEP</div>
+          <div class="input">
+            <input
+              type="text"
+              name="cep"
+              placeholder="99999-999"
+              onkeyup="Mask.cep(this)"
+              onblur="Validate.isCEP(this)"
+            >
+          </div>
+        </div>
+             
+      </div>
+
+      <button class="button"type="submit">SALVAR</button>
+    </form>
+
+  </section>
+
+  <footer>Copyright Launchstore</footer>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
